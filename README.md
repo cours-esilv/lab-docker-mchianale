@@ -77,6 +77,8 @@ Launch a container from the Docker image you have just created.
 ### 1.4: Accessing the service
 Try to access the application at the URL indicated in the logs (:warning:) Why do you think this address is not responding? 
 
+Need to access to several port but when I run a container, I am only using one port.
+
 Restart the container and open the ports required to access the service.
 > ⚠️ **ANSWER**: Create a file called `1.4` containing the commands you used to start the container with the ports open.
 
@@ -130,6 +132,17 @@ Your container back now started, open an interactive session to observe the file
 cat /etc/*release
 ```
 What OS is being used in the container?
+```
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+```
 
 > ⚠️ **ANSWER**: Create a file called `1.10` containing the commands you used to start an interactive session.
 
