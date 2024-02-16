@@ -1,0 +1,9 @@
+version: '3'
+services:
+  backend-service: 
+    image: mchianale/lab-docker-mchianale:latest # Change "my-image" to your actual backend image
+    ports:
+      - "8080:5000" 
+      - "8081:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=development 
