@@ -1,2 +1,4 @@
 #build image
 docker build -t front_app:v1 .
+#container
+docker run -d -p 8082:80 -e WS_BACK_URL=http://host.docker.internal:8080 front_app:v1
