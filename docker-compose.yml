@@ -1,9 +1,18 @@
 version: '3'
 services:
+
   backend-service: 
-    image: mchianale/lab-docker-mchianale:latest # Change "my-image" to your actual backend image
+    image: mchianale/lab-docker-mchianale:latest  
     ports:
       - "8080:5000" 
       - "8081:5000"
     environment:
       - CURRENT_ENVIRONMENT=development 
+      
+      
+  front-end-service:  
+    image: mchianale/lab-docker-mchianale-front:latest  
+    ports:
+      - "8082:80"  
+    environment:
+      - WS_BACK_URL=http://backend-service:5000
