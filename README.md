@@ -169,6 +169,10 @@ Launch your back container at the same time as your front container and modify t
 ### 1.13 : Testing write urls
 Use the `/write` path of the backend URL to write to the log file of the back container.
 Check the contents of the log file by connecting to the container back in interactive mode.
+```
+docker exec -it flask_app /bin/bash
+cat logs/my-messages.log
+```
 
 ### 1.14: Clean-up
 Stop all the containers and delete all the local images you have created so far.
