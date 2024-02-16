@@ -1,4 +1,14 @@
 #build image
 docker build -t front_app:v1 .
 #container
-docker run -d -p 8082:80 -e WS_BACK_URL=http://host.docker.internal:8080 front_app:v1
+docker run -d --name front_app -p 8082:80 -e WS_BACK_URL=http://host.docker.internal:8080 front_app:v1
+
+#Docker hub push
+docker tag front_app:v1 mchianale/lab-docker-mchianale-front:latest
+docker push mchianale/lab-docker-mchianale-front:latest
+
+#Hub Pull
+docker pull mchianale/lab-docker-mchianale-front:latest
+
+#container
+docker run -d --name front_app -p 8082:80 -e WS_BACK_URL=http://host.docker.internal:8080 mchianale/lab-docker-mchianale-front:latest
